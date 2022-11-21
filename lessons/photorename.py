@@ -1,6 +1,3 @@
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*-
-
 """
 Program which should rename photo files according to their creation date.
 """
