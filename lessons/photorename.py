@@ -37,7 +37,7 @@ for image_path in image_paths:
         renamed_file_name = picture_date.strftime('%y%m%d-%H%M%S') + image_path.suffix
         rename_path = image_path.with_name(renamed_file_name)
 
-        try:
+        if not rename_path.exists():
             image_path.rename(rename_path)
-        except FileExistsError:
+        else:
             print(f"Fichier {rename_path} existe pour le fichier {image_path}")
